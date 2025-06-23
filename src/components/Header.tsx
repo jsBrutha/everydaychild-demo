@@ -40,8 +40,10 @@ export default function Header() {
               {/* Home */}
               <Link
                 href="/"
-                className={`p-4 text-gray-700 hover:text-gray-900 transition-colors rounded-full ${
-                  pathname === "/" ? "bg-black text-white" : ""
+                className={`p-4 text-gray-700 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 rounded-full ${
+                  pathname === "/"
+                    ? "bg-black text-white hover:bg-black hover:text-white"
+                    : ""
                 }`}
               >
                 Home
@@ -50,8 +52,10 @@ export default function Header() {
               {/* About Us */}
               <Link
                 href="/about"
-                className={`p-4 text-gray-700 hover:text-gray-900 transition-colors rounded-full ${
-                  pathname === "/about" ? "bg-black text-white" : ""
+                className={`p-4 text-gray-700 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 rounded-full ${
+                  pathname === "/about"
+                    ? "bg-black text-white hover:bg-black hover:text-white"
+                    : ""
                 }`}
               >
                 About Us
@@ -60,7 +64,11 @@ export default function Header() {
               {/* Partnership Dropdown */}
               <div className="relative group">
                 <button
-                  className="flex items-center p-4 text-gray-700 hover:text-gray-900 transition-colors rounded-full focus:outline-none"
+                  className={`flex items-center p-4 text-gray-700 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 rounded-full focus:outline-none ${
+                    pathname.startsWith("/partnership")
+                      ? "bg-black text-white hover:bg-black hover:text-white"
+                      : ""
+                  }`}
                   type="button"
                 >
                   Partnership
@@ -69,19 +77,19 @@ export default function Header() {
                     height={16}
                     src="/icon/nav-drop.svg"
                     alt="dropdown"
-                    className="ml-2"
+                    className="ml-2 transition-transform duration-200 group-hover:rotate-180"
                   />
                 </button>
-                <div className="hidden group-hover:block absolute left-0 mt-2 w-72 bg-[#E6EEFA] rounded-2xl shadow-lg z-50 p-6">
+                <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 mt-2 w-72 bg-[#E6EEFA] rounded-2xl shadow-lg z-50 p-6 transition-all duration-200">
                   <Link
-                    href="/partnership/organisation-individuals"
-                    className="block w-full border border-black rounded-full px-4 py-3 mb-4 text-center font-medium text-gray-900 bg-transparent hover:bg-black hover:text-white transition-colors"
+                    href="/partnership/organisation-and-individuals"
+                    className="block w-full border border-black rounded-full px-4 py-3 mb-4 text-center font-medium text-gray-900 bg-transparent hover:bg-black hover:text-white transition-colors duration-200"
                   >
                     For Organizations and Individual
                   </Link>
                   <Link
                     href="/partnership/schools"
-                    className="block w-full px-4 py-3 text-gray-900 text-left font-medium rounded-full hover:bg-gray-200 transition-colors"
+                    className="block w-full px-4 py-3 text-gray-900 text-left font-medium rounded-full hover:bg-gray-200 transition-colors duration-200"
                   >
                     For School
                   </Link>
@@ -91,8 +99,10 @@ export default function Header() {
               {/* Gallery */}
               <Link
                 href="/gallery"
-                className={`p-4 text-gray-700 hover:text-gray-900 transition-colors rounded-full ${
-                  pathname === "/gallery" ? "bg-black text-white" : ""
+                className={`p-4 text-gray-700 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 rounded-full ${
+                  pathname === "/gallery"
+                    ? "bg-black text-white hover:bg-black hover:text-white"
+                    : ""
                 }`}
               >
                 Gallery
@@ -101,8 +111,10 @@ export default function Header() {
               {/* Contact */}
               <Link
                 href="/contact"
-                className={`p-4 text-gray-700 hover:text-gray-900 transition-colors rounded-full ${
-                  pathname === "/contact" ? "bg-black text-white" : ""
+                className={`p-4 text-gray-700 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 rounded-full ${
+                  pathname === "/contact"
+                    ? "bg-black text-white hover:bg-black hover:text-white"
+                    : ""
                 }`}
               >
                 Contact
