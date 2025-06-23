@@ -74,13 +74,13 @@ export default function Header() {
                 </button>
                 <div className="hidden group-hover:block absolute left-0 mt-2 w-72 bg-[#E6EEFA] rounded-2xl shadow-lg z-50 p-6">
                   <Link
-                    href="/partnership/org-individual"
+                    href="/partnership/organisation-individuals"
                     className="block w-full border border-black rounded-full px-4 py-3 mb-4 text-center font-medium text-gray-900 bg-transparent hover:bg-black hover:text-white transition-colors"
                   >
                     For Organizations and Individual
                   </Link>
                   <Link
-                    href="/partnership/school"
+                    href="/partnership/schools"
                     className="block w-full px-4 py-3 text-gray-900 text-left font-medium rounded-full hover:bg-gray-200 transition-colors"
                   >
                     For School
@@ -200,14 +200,14 @@ export default function Header() {
                 {isPartnershipOpen && (
                   <div className="ml-4 mt-2 space-y-2">
                     <Link
-                      href="/partnership/org-individual"
+                      href="/partnership/organisation-individuals"
                       className="block w-full border border-black rounded-full px-4 py-3 text-center font-medium text-gray-900 bg-transparent"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       For Organizations and Individual
                     </Link>
                     <Link
-                      href="/partnership/school"
+                      href="/partnership/schools"
                       className="block text-gray-900 font-medium py-2"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
