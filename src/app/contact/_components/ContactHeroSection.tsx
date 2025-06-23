@@ -14,8 +14,8 @@ export default function ContactHeroSection() {
               Reach Out Today
             </h1>
             <p className="text-lg text-gray-700 leading-relaxed">
-              We'd love to hear from you. Reach out to us with any questions or
-              inquiries.
+              We&apos;d love to hear from you. Reach out to us with any
+              questions or inquiries.
             </p>
           </div>
 

@@ -67,7 +67,7 @@ export default function HowToHelpSection() {
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             There are many ways to get involved and make a meaningful difference
-            in a child's life. Choose the option that works best for you.
+            in a child&apos;s life. Choose the option that works best for you.
           </p>
         </div>
 

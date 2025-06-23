@@ -218,8 +218,8 @@ export default function ContactFormSection() {
                     htmlFor="message"
                     className="block text-sm font-medium text-gray-700 mb-2"
                   >
-                    Message (We'd love to hear how your school might like to
-                    support.)
+                    Message (We&apos;d love to hear how your school might like
+                    to support.)
                   </label>
                   <textarea
                     {...register("message")}

@@ -64,7 +64,7 @@ export default function AboutTeamSection() {
                       key={index}
                       className="text-black leading-relaxed text-base"
                     >
-                      "{paragraph}"
+                      &quot;{paragraph}&quot;
                     </p>
                   ))}
                 </div>
@@ -129,7 +129,7 @@ export default function AboutTeamSection() {
             <div className="space-y-3">
               {founderData.story.map((paragraph, index) => (
                 <p key={index} className="text-black leading-relaxed text-sm">
-                  "{paragraph}"
+                  &quot;{paragraph}&quot;
                 </p>
               ))}
             </div>

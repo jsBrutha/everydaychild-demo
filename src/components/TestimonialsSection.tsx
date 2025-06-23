@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function TestimonialsSection() {
   const testimonials = [
     {
@@ -48,7 +46,7 @@ export default function TestimonialsSection() {
     <section className="py-20 bg-yellow-400 relative overflow-hidden">
       {/* Quote decoration */}
       <div className="absolute top-10 left-10 text-8xl text-yellow-500 opacity-20 font-serif">
-        "
+        &quot;
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -70,7 +68,7 @@ export default function TestimonialsSection() {
             >
               {/* Quote mark */}
               <div className="absolute -top-4 left-8 bg-blue-600 w-8 h-8 rounded-full flex items-center justify-center">
-                <span className="text-white text-lg font-bold">"</span>
+                <span className="text-white text-lg font-bold">&quot;</span>
               </div>
 
               <div className="mt-4">
