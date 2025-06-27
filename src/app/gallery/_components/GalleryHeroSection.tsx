@@ -7,7 +7,7 @@ export default function GalleryHeroSection() {
         {/* Hero Image with Overlay Text */}
         <div className="relative w-full h-[400px] lg:h-[500px] rounded-3xl overflow-hidden">
           <Image
-            src="/images/about/hero-desktop.png"
+            src="/images/gallery-hero.png"
             alt="Children in classroom - Gallery hero"
             fill
             className="object-cover"
@@ -15,7 +15,7 @@ export default function GalleryHeroSection() {
           />
 
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+          {/* <div className="absolute inset-0  flex items-center justify-center">
             <div className="text-center text-white space-y-4 max-w-2xl px-4">
               <p className="text-sm font-medium tracking-wide uppercase">
                 OUR GALLERY
@@ -28,7 +28,7 @@ export default function GalleryHeroSection() {
                 Nigeria.
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

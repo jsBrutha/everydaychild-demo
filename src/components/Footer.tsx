@@ -45,10 +45,18 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/partnership"
+                  href="/partnership/organisation-and-individuals"
                   className="text-white hover:text-gray-200 transition-colors"
                 >
-                  Partnership
+                  Organisation and Individuals
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/partnership/schools"
+                  className="text-white hover:text-gray-200 transition-colors"
+                >
+                  Schools
                 </Link>
               </li>
             </ul>
@@ -143,7 +151,7 @@ export default function Footer() {
             © 2025 EveryChild International. All rights reserved.
           </p>
           <Link
-            href="/donate"
+            href="/partnership/organisation-and-individuals"
             className="bg-white/20 hover:bg-white/30 text-white px-8 py-3 rounded-full font-semibold transition-colors flex items-center space-x-2 w-full lg:w-auto justify-center"
           >
             <span>Donate Now</span>

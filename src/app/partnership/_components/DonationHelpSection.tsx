@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function DonationHelpSection() {
   return (
     <section className="bg-white py-16 lg:py-24 px-4">
@@ -21,9 +23,12 @@ export default function DonationHelpSection() {
         </p>
 
         {/* Contact Button */}
-        <button className="bg-primary-blue text-white px-8 py-4 lg:px-12 lg:py-4 rounded-full font-medium text-lg hover:bg-blue-700 transition-colors">
+        <Link
+          href="/contact"
+          className="bg-primary-blue text-white px-8 py-4 lg:px-12 lg:py-4 rounded-full font-medium text-lg hover:bg-blue-700 transition-colors inline-block"
+        >
           Contact Us
-        </button>
+        </Link>
       </div>
     </section>
   );

@@ -124,7 +124,7 @@ export default function Header() {
             {/* Donate Button */}
             <div className="hidden md:flex items-center">
               <Link
-                href="/donate"
+                href="/partnership/organisation-and-individuals"
                 className="bg-[#2772D7] border border-[#9CBEFF] text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium"
               >
                 Donate Now
@@ -251,7 +251,7 @@ export default function Header() {
             {/* Mobile Donate Button */}
             <div className="p-4 border-t">
               <Link
-                href="/donate"
+                href="/partnership/organisation-and-individuals"
                 className="block w-full bg-[#2772D7] border border-[#9CBEFF] text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors font-medium text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >

@@ -12,7 +12,7 @@ export default function HowToHelpSection() {
       description:
         "Your financial contribution directly supports educational programs and provides essential resources for children in need.",
       cta: "Make a Donation",
-      link: "/donate",
+      link: "/partnership/organisation-and-individuals",
       color: "bg-blue-600",
     },
     {

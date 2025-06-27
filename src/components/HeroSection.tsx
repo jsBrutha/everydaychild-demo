@@ -23,13 +23,13 @@ export default function HeroSection() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center font-display ">
           <Link
-            href="/donate"
+            href="/partnership/organisation-and-individuals"
             className="bg-primary-blue border border-[#9CBEFF] shadow-lg text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-colors font-medium inline-flex items-center justify-center"
           >
             Donate Now
           </Link>
           <Link
-            href="/learn-more"
+            href="/about"
             className=" shadow-lg bg-[#EEEEF1] text-gray-700 px-8 py-4 rounded-full hover:border-gray-400 hover:text-gray-900 transition-colors font-medium inline-flex items-center justify-center"
           >
             Learn More

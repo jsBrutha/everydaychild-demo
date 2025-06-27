@@ -11,7 +11,7 @@ const helpOptions = [
       "Your financial contribution helps provide school supplies, uniforms, and essentials that get children back in school",
     button: {
       text: "Donate Now",
-      href: "/donate",
+      href: "/partnership/organisation-and-individuals",
     },
   },
   {

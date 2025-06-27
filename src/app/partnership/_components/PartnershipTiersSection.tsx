@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface TierData {
   name: string;
   amount: string;
@@ -76,9 +78,12 @@ export default function PartnershipTiersSection() {
                 <p className="text-gray-700 mb-6 leading-relaxed lg:min-h-[3rem]">
                   {tier.description}
                 </p>
-                <button className="bg-primary-blue text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors">
+                <Link
+                  href="/partnership/organisation-and-individuals"
+                  className="bg-primary-blue text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors inline-block"
+                >
                   Donate Now
-                </button>
+                </Link>
               </div>
             ))}
           </div>
@@ -99,9 +104,12 @@ export default function PartnershipTiersSection() {
                 <p className="text-gray-700 mb-6 leading-relaxed lg:min-h-[3rem]">
                   {tier.description}
                 </p>
-                <button className="bg-primary-blue text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors">
+                <Link
+                  href="/partnership/organisation-and-individuals"
+                  className="bg-primary-blue text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors inline-block"
+                >
                   Donate Now
-                </button>
+                </Link>
               </div>
             ))}
           </div>
