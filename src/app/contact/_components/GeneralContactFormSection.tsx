@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useState } from "react";
+import axios from "axios";
 
 // Form validation schema for general contact
 const generalContactFormSchema = z.object({
@@ -29,25 +30,30 @@ export default function GeneralContactFormSection() {
   } = useForm<GeneralContactFormData>({
     resolver: zodResolver(generalContactFormSchema),
   });
+  //script.google.com/macros/s/AKfycbyNGK9BLg2ZoJ_pmEon34scP26k0JgndwDQi6TrtoRsW7hK9MUBX7B3MnwngIvr_CGh/exec
+  //script.google.com/macros/s/AKfycbyNGK9BLg2ZoJ_pmEon34scP26k0JgndwDQi6TrtoRsW7hK9MUBX7B3MnwngIvr_CGh/exec
+  const GOOGLE_SCRIPT_WEBAPP_URL =
+    "https://script.google.com/macros/s/AKfycbwO2hOxdi_DUo8Fj9qY3HlVRHo2Xah0-crdFvxYRxqhTA4liAp0so927bu1DkEERTYE/exec"; // TODO: Replace with your actual URL
 
   const onSubmit = async (data: GeneralContactFormData) => {
     setIsSubmitting(true);
     setSubmitStatus("idle");
 
     try {
-      const response = await fetch("/api/general-contact", {
-        method: "POST",
+      const params = new URLSearchParams();
+      params.append("fullName", data.fullName);
+      params.append("emailAddress", data.emailAddress);
+      params.append("subject", data.subject);
+      params.append("message", data.message);
+     
+
+      const response = await axios.post(GOOGLE_SCRIPT_WEBAPP_URL, params, {
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
         },
-        body: JSON.stringify({
-          ...data,
-          to: "adefidipei@gmail.com",
-          subject: `General Inquiry: ${data.subject}`,
-        }),
       });
 
-      if (response.ok) {
+      if (response.status === 200 && response.data.result === "success") {
         setSubmitStatus("success");
         reset();
       } else {

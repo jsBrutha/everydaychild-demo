@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useState } from "react";
+import axios from "axios";
 
 // Form validation schema
 const contactFormSchema = z.object({
@@ -32,24 +33,32 @@ export default function ContactFormSection() {
     resolver: zodResolver(contactFormSchema),
   });
 
+  
+
+  const GOOGLE_SCRIPT_WEBAPP_URL =
+    "https://script.google.com/macros/s/AKfycbwO2hOxdi_DUo8Fj9qY3HlVRHo2Xah0-crdFvxYRxqhTA4liAp0so927bu1DkEERTYE/exec"; // TODO: Replace with your actual URL
+ 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     setSubmitStatus("idle");
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
+      const params = new URLSearchParams();
+      params.append("schoolName", data.schoolName);
+      params.append("fullAddress", data.fullAddress);
+      params.append("contactPersonName", data.contactPersonName);
+      params.append("phoneNumber", data.phoneNumber);
+      params.append("emailAddress", data.emailAddress);
+      params.append("message", data.message);
+      
+
+      const response = await axios.post(GOOGLE_SCRIPT_WEBAPP_URL, params, {
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
         },
-        body: JSON.stringify({
-          ...data,
-          to: "adefidipei@gmail.com",
-          subject: `School Partnership Inquiry from ${data.schoolName}`,
-        }),
       });
 
-      if (response.ok) {
+      if (response.status === 200 && response.data.result === "success") {
         setSubmitStatus("success");
         reset();
       } else {
