@@ -48,7 +48,7 @@ const galleryItems: GalleryItem[] = [
   },
 ];
 
-export default function PhotoGridSection() {
+export default function  PhotoGridSection() {
   return (
     <section className="bg-white py-16 px-4">
       <div className="max-w-6xl mx-auto">

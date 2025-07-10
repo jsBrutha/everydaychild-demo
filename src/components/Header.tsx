@@ -212,7 +212,7 @@ export default function Header() {
                 {isPartnershipOpen && (
                   <div className="ml-4 mt-2 space-y-2">
                     <Link
-                      href="/partnership/organisation-individuals"
+                      href="/partnership/organisation-and-individuals"
                       className="block w-full border border-black rounded-full px-4 py-3 text-center font-medium text-gray-900 bg-transparent"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
