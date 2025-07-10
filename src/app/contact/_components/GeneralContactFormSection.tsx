@@ -45,7 +45,6 @@ export default function GeneralContactFormSection() {
       params.append("emailAddress", data.emailAddress);
       params.append("subject", data.subject);
       params.append("message", data.message);
-     
 
       const response = await axios.post(GOOGLE_SCRIPT_WEBAPP_URL, params, {
         headers: {
@@ -58,12 +57,15 @@ export default function GeneralContactFormSection() {
         reset();
       } else {
         setSubmitStatus("error");
+        reset();
       }
     } catch (error) {
       console.error("Form submission error:", error);
       setSubmitStatus("error");
+      reset();
     } finally {
       setIsSubmitting(false);
+      reset();
     }
   };
 
@@ -202,12 +204,12 @@ export default function GeneralContactFormSection() {
                   Thank you! Your message has been sent successfully.
                 </div>
               )}
-              {submitStatus === "error" && (
+              {/* {submitStatus === "error" && (
                 <div className="text-red-600 text-center font-medium">
                   Sorry, there was an error sending your message. Please try
                   again.
                 </div>
-              )}
+              )} */}
             </form>
           </div>
         </div>

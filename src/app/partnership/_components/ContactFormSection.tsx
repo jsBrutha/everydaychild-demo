@@ -33,11 +33,9 @@ export default function ContactFormSection() {
     resolver: zodResolver(contactFormSchema),
   });
 
-  
-
   const GOOGLE_SCRIPT_WEBAPP_URL =
     "https://script.google.com/macros/s/AKfycbwO2hOxdi_DUo8Fj9qY3HlVRHo2Xah0-crdFvxYRxqhTA4liAp0so927bu1DkEERTYE/exec"; // TODO: Replace with your actual URL
- 
+
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     setSubmitStatus("idle");
@@ -50,7 +48,6 @@ export default function ContactFormSection() {
       params.append("phoneNumber", data.phoneNumber);
       params.append("emailAddress", data.emailAddress);
       params.append("message", data.message);
-      
 
       const response = await axios.post(GOOGLE_SCRIPT_WEBAPP_URL, params, {
         headers: {
@@ -63,12 +60,15 @@ export default function ContactFormSection() {
         reset();
       } else {
         setSubmitStatus("error");
+        reset();
       }
     } catch (error) {
       console.error("Form submission error:", error);
       setSubmitStatus("error");
+      reset();
     } finally {
       setIsSubmitting(false);
+      reset();
     }
   };
 
@@ -259,12 +259,12 @@ export default function ContactFormSection() {
                     Thank you! Your message has been sent successfully.
                   </div>
                 )}
-                {submitStatus === "error" && (
+                {/* {submitStatus === "error" && (
                   <div className="text-red-600 text-center font-medium">
                     Sorry, there was an error sending your message. Please try
                     again.
                   </div>
-                )}
+                )} */}
               </form>
             </div>
           </div>
