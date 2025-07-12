@@ -60,9 +60,9 @@ export default function GeneralContactFormSection() {
         reset();
       }
     } catch (error) {
-      console.error("Form submission error:", error);
-      setSubmitStatus("error");
-      reset();
+      console.error("Form submission error:", error)
+      setSubmitStatus("error")
+      reset()
     } finally {
       setIsSubmitting(false);
       reset();
