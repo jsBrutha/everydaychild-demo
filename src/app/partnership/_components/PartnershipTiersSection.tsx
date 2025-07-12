@@ -79,7 +79,7 @@ export default function PartnershipTiersSection() {
                   {tier.description}
                 </p>
                 <Link
-                  href="/partnership/organisation-and-individuals"
+                  href="#bank-details"
                   className="bg-primary-blue text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors inline-block"
                 >
                   Donate Now
@@ -105,7 +105,7 @@ export default function PartnershipTiersSection() {
                   {tier.description}
                 </p>
                 <Link
-                  href="/partnership/organisation-and-individuals"
+                  href="#bank-details"
                   className="bg-primary-blue text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors inline-block"
                 >
                   Donate Now

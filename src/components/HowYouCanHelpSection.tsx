@@ -21,7 +21,7 @@ const helpOptions = [
       "Whether you're an individual, school, organization or business, you can help us expand our reach and impact by supporting education initiatives in your community.",
     button: {
       text: "Become a Partner",
-      href: "/partner",
+      href: "/partnership/schools",
     },
   },
 ];

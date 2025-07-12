@@ -35,7 +35,7 @@ const bankAccounts: BankAccount[] = [
 
 export default function BankDetailsSection() {
   return (
-    <section className="bg-white py-16 px-4 ">
+    <section id="bank-details" className="bg-white py-16 px-4 ">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="mb-12">
