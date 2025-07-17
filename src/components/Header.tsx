@@ -83,13 +83,13 @@ export default function Header() {
                 <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 mt-2 w-72 bg-[#E6EEFA] rounded-2xl shadow-lg z-50 p-6 transition-all duration-200">
                   <Link
                     href="/partnership/organisation-and-individuals"
-                    className="block w-full border border-black rounded-full px-4 py-3 mb-4 text-center font-medium text-gray-900 bg-transparent hover:bg-black hover:text-white transition-colors duration-200"
+                    className="block w-full px-4 py-3 mb-4 text-center font-medium text-gray-900 bg-transparent hover:bg-black hover:text-white transition-colors duration-200 rounded-full"
                   >
                     For Organizations and Individual
                   </Link>
                   <Link
                     href="/partnership/schools"
-                    className="block w-full px-4 py-3 text-gray-900 text-left font-medium rounded-full hover:bg-gray-200 transition-colors duration-200"
+                    className="block w-full px-4 py-3 text-center font-medium text-gray-900 bg-transparent hover:bg-black hover:text-white transition-colors duration-200 rounded-full"
                   >
                     For School
                   </Link>
@@ -213,14 +213,14 @@ export default function Header() {
                   <div className="ml-4 mt-2 space-y-2">
                     <Link
                       href="/partnership/organisation-and-individuals"
-                      className="block w-full border border-black rounded-full px-4 py-3 text-center font-medium text-gray-900 bg-transparent"
+                      className="block w-full px-4 py-3 text-center font-medium text-gray-900 bg-transparent hover:bg-black hover:text-white transition-colors duration-200 rounded-full"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       For Organizations and Individual
                     </Link>
                     <Link
                       href="/partnership/schools"
-                      className="block text-gray-900 font-medium py-2"
+                      className="block w-full px-4 py-3 text-center font-medium text-gray-900 bg-transparent hover:bg-black hover:text-white transition-colors duration-200 rounded-full"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       For School

@@ -1,13 +1,16 @@
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function PartnershipHeroSection() {
+  const pathname = usePathname();
+  const isSchools = pathname.includes("schools");
   return (
     <section className="bg-white px-4 lg:px-8 py-12 lg:py-16">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-8 lg:mb-12">
           <p className="text-base lg:text-sm font-medium tracking-wide font-display lg:font-sans text-gray-600 mb-4">
-            ORGANIZATIONS AND INDIVIDUALS
+            {isSchools ? "SCHOOLS" : "ORGANIZATIONS AND INDIVIDUALS"}
           </p>
           <h1 className="text-3xl md:text-[49px] lg:text-5xl xl:text-6xl font-semibold  text-gray-900 mb-4 lg:mb-6 font-display">
             Become a Partner
