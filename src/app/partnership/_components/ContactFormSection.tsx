@@ -5,6 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useState } from "react";
 import axios from "axios";
+import { toast, Toaster } from "sonner";
 
 // Form validation schema
 const contactFormSchema = z.object({
@@ -49,21 +50,28 @@ export default function ContactFormSection() {
       params.append("emailAddress", data.emailAddress);
       params.append("message", data.message);
 
-      const response = await axios.post(GOOGLE_SCRIPT_WEBAPP_URL, params, {
+      await axios.post(GOOGLE_SCRIPT_WEBAPP_URL, params, {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         },
       });
 
-      if (response.status === 200 && response.data.result === "success") {
-        setSubmitStatus("success");
-        reset();
-      } else {
-        setSubmitStatus("error");
-        reset();
-      }
+      toast.success("Response has been successfully submitted!", {
+        style: {
+          background: "#22c55e",
+          color: "white",
+        },
+      });
+
+      reset();
     } catch (error) {
       console.error("Form submission error:", error);
+      toast.error("Something went wrong, please try again later.", {
+        style: {
+          background: "#ef4444",
+          color: "white",
+        },
+      });
       setSubmitStatus("error");
       reset();
     } finally {
@@ -270,6 +278,7 @@ export default function ContactFormSection() {
           </div>
         </div>
       </div>
+      <Toaster />
     </section>
   );
 }
