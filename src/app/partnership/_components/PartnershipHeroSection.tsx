@@ -7,7 +7,7 @@ export default function PartnershipHeroSection() {
         {/* Section Header */}
         <div className="text-center mb-8 lg:mb-12">
           <p className="text-base lg:text-sm font-medium tracking-wide font-display lg:font-sans text-gray-600 mb-4">
-            SCHOOLS
+            ORGANIZATIONS AND INDIVIDUALS
           </p>
           <h1 className="text-3xl md:text-[49px] lg:text-5xl xl:text-6xl font-semibold  text-gray-900 mb-4 lg:mb-6 font-display">
             Become a Partner
