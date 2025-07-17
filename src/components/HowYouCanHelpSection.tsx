@@ -67,8 +67,8 @@ export default function HowYouCanHelpSection({ className = "" }) {
       </h2>
 
       <NotebookBackgroundWrapper
-        bgMobile="bg-[url('/patterns/page-mobile.png')]"
-        bgDesktop="bg-[url('/patterns/page.png')]"
+        bgMobile="bg-[url('/patterns/page-mobile.svg')]"
+        bgDesktop="bg-[url('/patterns/page.svg')]"
         curveMobile="/images/cycle-breaking-education-yellow-mobile.svg"
         curveDesktop="/images/cycle-breaking-education-yellow.svg"
         className={className}

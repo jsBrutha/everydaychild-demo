@@ -48,8 +48,8 @@ export default function BankDetailsSection() {
         </div>
 
         <NotebookBackgroundWrapper
-          bgMobile="bg-[url('/patterns/notebook-green-mobile.png')]"
-          bgDesktop="bg-[url('/patterns/notebook-green.png')]"
+          bgMobile="bg-[url('/patterns/notebook-green-mobile.svg')]"
+          bgDesktop="bg-[url('/patterns/notebook-green.svg')]"
         >
           <div className="space-y-6 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-6 py-[76px] lg:px-[100px] px-4 ">
             {bankAccounts.map((account) => (

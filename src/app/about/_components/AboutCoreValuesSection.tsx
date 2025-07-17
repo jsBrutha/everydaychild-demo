@@ -60,8 +60,8 @@ const CoreValueCard = ({ value }: { value: CoreValue }) => {
 export default function AboutCoreValuesSection() {
   return (
     <NotebookBackgroundWrapper
-      bgMobile="bg-[url('/patterns/notebook-green-mobile.png')]"
-      bgDesktop="bg-[url('/patterns/notebook-green.png')]"
+      bgMobile="bg-[url('/patterns/notebook-green-mobile.svg')]"
+      bgDesktop="bg-[url('/patterns/notebook-green          .svg')]"
     >
       <div className="text-center space-y-12 lg:space-y-16 pt-12 pb-[57px] ">
         {/* Section Title */}

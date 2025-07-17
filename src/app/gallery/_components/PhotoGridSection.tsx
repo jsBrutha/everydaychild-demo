@@ -66,8 +66,8 @@ export default function PhotoGridSection() {
     <section className="bg-white py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <NotebookBackgroundWrapper
-          bgMobile="bg-[url('/patterns/notebook-green-mobile.png')]"
-          bgDesktop="bg-[url('/patterns/notebook-green.png')]"
+          bgMobile="bg-[url('/patterns/notebook-green-mobile.svg')]"
+          bgDesktop="bg-[url('/patterns/notebook-green.svg')]"
         >
           <div className="py-16 px-4 lg:px-8">
             {/* Photo Grid */}
