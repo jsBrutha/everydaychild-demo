@@ -3,7 +3,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import axios from "axios";
 import { toast } from "sonner";
 import { Toaster } from "sonner";
@@ -78,9 +78,7 @@ export default function GeneralContactFormSection() {
     }
   };
 
-  useEffect(() => {
-    toast.success("Form has been successfully submitted!");
-  }, []);
+
 
   return (
     <section className="bg-white py-16 px-4">
